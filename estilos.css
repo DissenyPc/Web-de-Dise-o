@@ -1,0 +1,708 @@
+/*FUENTES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Ruda:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*----------------------------cabecera--------------------*/
+
+#toggle {
+
+    /* display: none; */
+
+}
+
+
+.menu {
+
+    width: 300px;
+    height: 35px;
+    /* display: none; */
+
+
+}
+
+header {
+    padding: 20px 0;
+    width: 100%;
+    /* box-shadow: 0 8px 20px #0c0c0c; */
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    z-index: 300;
+}
+
+header,
+.logo {
+    display: flex;
+    padding-left: 20px;
+
+}
+
+#menu-principal {
+    margin-right: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: right;
+
+}
+
+
+
+.nav {
+    /*  ul en una linea*/
+    float: right;
+    margin-right: 5%;
+
+
+}
+
+.nav li {
+    /* quitar decoracion de las listas */
+    list-style: none;
+
+
+}
+
+.nav>li {
+    /* li a la derecha*/
+    float: left;
+    margin: 20px 10px 0 10px;
+}
+
+.nav li a {
+    background-color: transparent;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 5px solid #000000;
+    border-radius: 5px;
+    transition: color 0.5s, border-color 0.5s;
+
+}
+
+.nav li a:hover {
+
+    color: #1E73BE;
+    border-top: 6px solid #1E73BE;
+    border-radius: 5px;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    box-shadow: 5px 5px 10px rgb(43, 41, 41);
+
+
+
+
+
+
+}
+
+.nav li:hover>ul {
+    /*hacer que aparezca dandole display diferente a none a todos los ul cuando se hover su li */
+    display: block;
+
+    /*SE DESPLAZA AL PASAR EL RATON*/
+    animation: DESPLAZAR 1s 1;
+
+}
+
+@keyframes DESPLAZAR {
+
+    /*UNA FUNCION EN CSS*/
+    5% {
+        margin-top: 5Px;
+    }
+}
+
+/*HASTA AQUI LA ANIMACION*/
+
+.nav li ul li {
+    position: relative;
+}
+
+.nav li ul li ul {
+    left: 177px;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    box-shadow: 5px 5px 10px rgb(43, 41, 41);
+
+
+}
+
+
+
+#menu-principal>ul>li>ul>li>a {
+    border-radius: 0;
+
+}
+
+#menu-principal>ul>li>ul>li>ul>li>a {
+    position: relative;
+    z-index: 100;
+    background-color: #1E73BE;
+    color: white;
+    font-weight: bold;
+    border: 0.3px solid rgb(0, 0, 0);
+    border-radius: 0;
+
+
+
+}
+
+#menu-principal>ul>li>ul>li>ul>li>a:hover {
+
+    background-color: white;
+    color: black;
+
+}
+
+
+
+#menu-principal>ul>li>ul>li>a {
+    background-color: #1E73BE;
+    color: white;
+    border: 0.3px solid rgb(0, 0, 0);
+}
+
+#menu-principal>ul>li>ul>li>a:hover {
+
+    background-color: white;
+    color: black;
+}
+
+
+/*----------------------body------------------------*/
+
+.vacio {
+    height: 90px;
+}
+
+/*-------------------DESCRIPCION---------------------*/
+.descripcion {
+    padding: 40px;
+    margin-top: 35px;
+    background: linear-gradient(#1E73BE, rgb(255, 255, 255));
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Ruda", Sans-serif;
+
+
+}
+
+.titulo {
+
+    font-size: 45px;
+    /*reflejo*/
+    -webkit-box-reflect: below -20px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+
+}
+
+.descripcion h2 {
+
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.descripcion h3 {
+
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 800
+}
+
+.descripcion .botones-descripcion {
+
+    width: 700px;
+
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+.descripcion input,
+.empieza {
+
+    margin-top: 20px;
+    border-style: 0;
+    padding: 15px 40px;
+    font-size: 30px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+    border-radius: 18px;
+    background-color: rgb(11, 7, 236);
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px rgb(48, 47, 47);
+    border-color: #000000;
+    cursor: pointer;
+}
+
+.descripcion input:hover,
+.empieza:hover {
+
+    box-shadow: none;
+
+}
+
+.descripcion .botones-descripcion-derecha,
+.empieza {
+    background-color: rgb(115, 115, 221);
+}
+
+/*--------------------------como_son_nuestros_diseños----------------------*/
+
+.como_que {
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.como,
+.que {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+    justify-content: space-between;
+
+}
+
+.como h3 {
+    text-align: center;
+    color: #EF7F1A;
+    font-size: 30px;
+}
+
+.que h3 {
+    text-align: center;
+    color: #4054B2;
+    font-size: 30px;
+}
+
+.como_cuadros,
+.que_cuadros {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.contenedor-icono-titulo_como,
+.contenedor-icono-titulo_que {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 0 30px 15px 30px;
+}
+
+.contenedor-icono-titulo_como {
+    border: solid 3px #EF7F1A;
+}
+
+.contenedor-icono-titulo_que {
+
+    border: solid 3px #4054B2;
+    ;
+}
+
+.contenedor-icono-titulo_como h4 {
+
+    margin: 20px;
+    color: #EF7F1A;
+    font-size: 20px;
+}
+
+.contenedor-icono-titulo_que h4 {
+
+    text-align: center;
+    margin: 20px;
+    color: #4054B2;
+    font-size: 20px;
+}
+
+.contenedor_icono_como,
+.contenedor_icono_que {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+}
+
+.contenedor_icono_como {
+    border: solid 2px #EF7F1A;
+}
+
+.contenedor_icono_que {
+    border: solid 2px #4054B2;
+}
+
+.iconos_como,
+.iconos_que {
+    width: 80px;
+    margin: 0 auto;
+
+}
+
+.separador {
+
+    border: solid 1px grey;
+    margin-top: 25px;
+}
+
+/*--------------------------------------desapercibida-----------------*/
+
+.desapercibida {
+    background: linear-gradient(rgb(255, 255, 255), #EF7F1A, rgb(255, 255, 255));
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 180px;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.imagen_2 {
+    width: 500px;
+    border-radius: 130px 20px 150px 20px;
+    margin-right: 80px;
+    margin-left: 30px;
+    transition: all 500ms;
+}
+
+.imagen_2:hover {
+    transform: rotate(-12deg);
+}
+
+.descripcion_2 {
+    margin-right: 30px;
+    margin-left: 80px;
+}
+
+.titulo_2 {
+    width: 80%;
+    font-size: 60px;
+    color: black;
+
+}
+
+.titulo_2:hover {
+    color: red;
+}
+
+.azul {
+    color: #4054B2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h4.mejorar {
+    margin-top: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+h4.mejorar::before,
+h4.mejorar::after {
+    content: "______";
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+
+}
+
+p.mejorar {
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: newspaper;
+
+}
+
+h3.crecer {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+/*------------------------diez dias-------------------------------*/
+
+.diezDias {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.diezDiasImagen {
+    margin-left: 150px;
+
+}
+
+.diezDiasDescripcion {
+    margin-right: 150px;
+}
+
+.diezDiasTitulo {
+    font-size: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline grey;
+}
+
+.diezDiasSub {
+    font-size: 70px;
+    color: rgb(87, 86, 86);
+    font-family: Helvetica, sans-serif;
+
+}
+
+.diezDiasYen {
+    font-size: 50px;
+    color: #EF7F1A;
+    font-family: Helvetica, sans-serif;
+}
+
+.diezDiasParrafo {
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+/*--------------------adaptaods--------------------------*/
+
+.adaptados {
+    width: 100%;
+    background: linear-gradient(rgb(255, 255, 255), #4054B2, rgb(255, 255, 255));
+    text-align: center;
+
+}
+
+.adaptadosTitulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    color: black;
+}
+
+.adaptadosContenido {
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-right: 100px;
+    align-items: center;
+}
+
+.adaptados img {
+
+    width: 90%;
+    margin-left: 50px;
+}
+
+.adaptadosParrafo {
+    font-size: 40px;
+    width: 90%px;
+    text-align: center;
+
+
+
+}
+
+/*-----------------------testimonios----------------------*/
+
+.testimonios {
+    width: 100%;
+    background-image: url(./imagenes/testimonial-2.png);
+    background-repeat: no-repeat;
+    background-position-x: 150px;
+    background-position-y: 50px;
+}
+
+.testimoniosTitulo {
+
+    -webkit-text-stroke: 3px rgb(77, 59, 175);
+    font-size: 100px;
+    text-align: center;
+    text-decoration: solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+
+}
+
+.trestestimonios {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.testimonio.uno {
+    margin-left: 500px;
+    margin-top: 120px;
+    height: 550px;
+}
+
+.testimonio.dos {
+    margin-left: 50px;
+    margin-top: 80px;
+    height: 550px;
+}
+
+.testimonio.tres {
+    height: 550px;
+}
+.testimonio { 
+    background-color: rgba(165, 206, 243, 0.8);
+    padding: 20px;
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    border-left: solid 10px #7488df;
+    border-radius: 0 40px 150px 0;
+}
+
+.testimonioNombre {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    align-items: center;
+    margin-left: 20px;
+}
+
+p.testimonioP {
+    margin-top: 15px;
+    width: 80%;
+    font-weight: 800;
+}
+
+p.testimonioP span {
+    font-weight: 100;
+}
+
+.logoTestimonio {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/*-------------------ayudarte--------------------------*/
+
+.ayudarte {
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   align-items: center;
+   justify-content: space-between;
+   background: linear-gradient(rgb(255, 255, 255), #EF7F1A, rgb(255, 255, 255));
+}
+
+.ayudarteIzquierda {
+    margin-left: 100px;
+}
+.ayudarteTitulo {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.ayudarteP {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.ayudarteImagen {
+    width: 700px;
+    margin-bottom: 20px;
+}
+.ayudarteLista summary{
+    background-color: #4054B2;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.ayudarteLista summary::before {
+    content: "+  ";
+}
+.ayudarteLista {
+    cursor: pointer;
+    padding: 0 20px;
+    font-size: 20px;
+    width: 70%;
+    
+}
+
+details[open] summary::before{
+    content: "-  ";
+}
+
+.ayudarteLista p {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+/*--------------------------pie-----------------------*/
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px;
+}
+.info {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    text-align: center;
+}
+
+.info h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.info p {
+    margin-bottom: 15px;
+}
+
+.logoPie {
+    width: 250px;
+    display: inline;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.copyrig {
+    display: inline;
+}
+
+.logocopy {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
